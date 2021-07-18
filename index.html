@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Quiz Web APIs</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <main>
+        <div id="highScore">View Highscores</div>
+
+        <div id="timer">Time:</div>
+
+
+        <!-- Home Section -->
+        <section id="homeSection">
+            <h1> Coding Quiz Challenge</h1>
+            <p>Try to answer the following code related questions within the time limit. Keep in mind that incorrect
+                answers will penalize your score/time by ten seconds </p>
+            <button id="startQuiz" type="button">Start Quiz</button>
+        </section>
+
+        <!-- --------------------------------- -->
+        <!--  Question Section -->
+        <div id="questionContainer" style="display: none;" >
+            <div id="questionTitle" ></div>
+            <div id="answerchoices">
+                <button id="ch1"></button>
+                <button id="ch2"></button>
+                <button id="ch3"></button>
+                <button id="ch4"></button>
+            </div>
+            <div id="ansMessage"></div>
+        </div>
+
+
+        <section id="alldonePage" style="display: none;" >
+            <h1>All Done!</h1>
+            <div>
+                <p id="finalScore">Your final score is: </p>
+
+            </div>
+            <form> Enter initials: <input type="text" name="name"></form> <br>
+
+            <button id="allDneBtn" type="button">Submit</button>
+        </section>
+
+        <section id="score" style="display: none;">
+            <h1>HighScore</h1>
+            <button id="highScoreBtnGoBack" type="button">Go Back</button>
+            <button id="highScoreBtnClear" type="button">Clear Highscores</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html

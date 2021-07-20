@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             <button id="startQuiz" type="button">Start Quiz</button>
         </section>
 
-        <!-- --------------------------------- -->
+
         <!--  Question Section -->
         <div id="questionContainer" style="display: none;">
             <div id="questionTitle"></div>
@@ -33,10 +33,10 @@
                 <button id="ch2"></button>
                 <button id="ch3"></button>
                 <button id="ch4"></button>
-            </div>
+            </div><br><br>
             <div id="ansMessage"></div>
         </div>
-
+        <!-- All done page- Here we enter our initials -->
 
         <section id="alldonePage" style="display: none;">
             <h1>All Done!</h1>
@@ -44,24 +44,23 @@
                 <p id="finalScore">Your final score is: </p>
 
             </div>
-            <form> Enter initials: 
+            <form> Enter initials:
                 <input type="text" name="name" id="txtInitials">
             </form> <br>
             <button id="allDneBtn">Submit</button><br><br>
             <div id="formMsg"></div>
         </section>
-
+        <!--Score Board section  -->
         <section id="score" style="display: none;">
-            <div id="allHighScore">HighScore</div>
-            <ol id="allHighScoreList"></ol>
-            <button id="highScoreBtnGoBack" 
-            onClick="window.location.reload();">Go Back</button>
-            <button id="highScoreBtnClear" onclick="clearHighScores()">Clear Highscores</button>
+            <div id="allHighScore">Highscores</div><br>
+            <ol id="allHighScoreList"></ol><br><br><br>
+            <button id="highScoreBtnGoBack" class="btn1" onClick="window.location.reload();">Go Back</button>
+            <button id="highScoreBtnClear" class="btn1" onclick="clearHighScores()">Clear Highscores</button>
         </section>
 
     </main>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html

@@ -1,3 +1,5 @@
+//In This project all the elements are created dynamically through Javascript and done the coding accordingly.
+//Data structures for the questions
 var questionsArray = [
   {
     title: "Commonly used data types DO NOT include:",
@@ -24,7 +26,7 @@ var questionsArray = [
     choices: ["1. JavaScript", "2. Terminal / bash", "3. For loops", "4. console.log"],
     answer: "4. console.log"
   }];
-
+//This is the section for starting the Quiz
 var butnStartQuiz = document.querySelector("#startQuiz");
 butnStartQuiz.addEventListener("click", startQuiz);
 var questionIndex = 0;
@@ -62,14 +64,14 @@ answerContainer.addEventListener("click", function (event) {
   }
 });
 
-
+// starting the code quiz. Displaying or hiding the pages as per the requirement using "block" and "none"
 function startQuiz() {
   quizTimeCounter();
   document.getElementById('homeSection').style.setProperty('display', 'none');
   document.getElementById('questionContainer').style.setProperty('display', 'block');
   loadQuestion();
 }
-
+// creating the question dynamically and assiging the values to the html page.
 function loadQuestion() {
   if (questionIndex < questionsArray.length) {
     var questionObject = questionsArray[questionIndex];
@@ -82,7 +84,7 @@ function loadQuestion() {
     ShowAllDone();
   }
 }
-
+ // This is the page for all done page after the question section. Here i am adjusted the timer based on the questions
 function ShowAllDone(){
   //No more questions to load
   document.getElementById('questionContainer').style.setProperty('display', 'none');
@@ -93,6 +95,7 @@ function ShowAllDone(){
   clearInterval(timeInterval);
 }
 
+// This section is for creating local storage using JSON
 
 var allHighScore = document.querySelector("#allHighScore");
 
@@ -102,13 +105,13 @@ function initializeScores() {
     scores = scoreSheet;
   }
 }
-
+//Clearing the local storage
 function clearHighScores() {
   localStorage.removeItem("scoreSheet");
   scores = [];
   viewScores();
 }
-
+// Viewing the data stored in the local storage.
 function viewScores() {
   var scoreSheet = JSON.parse(localStorage.getItem("scoreSheet"));
   if (scoreSheet !== null) {
@@ -141,7 +144,7 @@ function displayMessage(type, message) {
   formMsg.textContent = message;
   formMsg.setAttribute("class", type);
 }
-
+// This is for the Form page (all done page)
 var scores = [];
 
 var allDneBtn = document.querySelector("#allDneBtn");
@@ -161,10 +164,10 @@ allDneBtn.addEventListener("click", function (event) {
   }
 });
 
-
+// This section is for Timer
 var timeEl = document.querySelector("#timer");
 
-var timeLeft = 15;
+var timeLeft = 75;
 var timeInterval;
 
 function quizTimeCounter() {

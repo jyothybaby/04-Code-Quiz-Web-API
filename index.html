@@ -11,7 +11,7 @@
 
 <body>
     <main>
-        <div id="highScore">View Highscores</div>
+        <div id="highScore" onclick="viewScores()">View Highscores</div>
 
         <div id="timer">Time:</div>
 
@@ -26,8 +26,8 @@
 
         <!-- --------------------------------- -->
         <!--  Question Section -->
-        <div id="questionContainer" style="display: none;" >
-            <div id="questionTitle" ></div>
+        <div id="questionContainer" style="display: none;">
+            <div id="questionTitle"></div>
             <div id="answerchoices">
                 <button id="ch1"></button>
                 <button id="ch2"></button>
@@ -38,21 +38,25 @@
         </div>
 
 
-        <section id="alldonePage" style="display: none;" >
+        <section id="alldonePage" style="display: none;">
             <h1>All Done!</h1>
             <div>
                 <p id="finalScore">Your final score is: </p>
 
             </div>
-            <form> Enter initials: <input type="text" name="name"></form> <br>
-
-            <button id="allDneBtn" type="button">Submit</button>
+            <form> Enter initials: 
+                <input type="text" name="name" id="txtInitials">
+            </form> <br>
+            <button id="allDneBtn">Submit</button><br><br>
+            <div id="formMsg"></div>
         </section>
 
         <section id="score" style="display: none;">
-            <h1>HighScore</h1>
-            <button id="highScoreBtnGoBack" type="button">Go Back</button>
-            <button id="highScoreBtnClear" type="button">Clear Highscores</button>
+            <div id="allHighScore">HighScore</div>
+            <ol id="allHighScoreList"></ol>
+            <button id="highScoreBtnGoBack" 
+            onClick="window.location.reload();">Go Back</button>
+            <button id="highScoreBtnClear" onclick="clearHighScores()">Clear Highscores</button>
         </section>
 
     </main>
